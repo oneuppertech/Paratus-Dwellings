@@ -4,7 +4,7 @@ import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 /* ---------- ASSETS (same filenames as before; missing images hide themselves) ---------- */
 const asset = (name) => new URL(`../assets/${name}`, import.meta.url).href
 const images = {
-  logo: asset('paratus-dwellings-logo.jpeg'),
+  logo: asset('paratus-dwellings-logo.png'),
   hero: asset('hero.jpg'),
   about: asset('about.jpg'),
   cleaning: asset('cleaning.jpg'),
@@ -663,28 +663,28 @@ onBeforeUnmount(() => {
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-[#061a3a] text-slate-300 pt-16 pb-24 lg:pb-8 px-5">
+     <footer class="bg-white text-slate-600 border-t-4 border-[#A8E80F] shadow-[0_-8px_30px_rgba(10,42,92,.08)] pt-16 pb-24 lg:pb-8 px-5">
       <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
         <div class="md:col-span-2">
-          <img :src="images.logo" alt="Paratus Dwellings" class="h-14 bg-white rounded-xl p-1" @error="hideBroken" />
+          <img :src="images.logo" alt="Paratus Dwellings" class="h-14 w-auto" @error="hideBroken" />
           <p class="mt-4 text-sm max-w-sm">A place to call home. Skills to build your future. Opportunities to grow and thrive.</p>
-          <p class="mt-3 text-xs max-w-sm text-slate-400">Supported accommodation for adults aged 18+. We do not provide personal care, nursing or clinical treatment.</p>
+          <p class="mt-3 text-xs max-w-sm text-slate-500">Supported accommodation for adults aged 18+. We do not provide personal care, nursing or clinical treatment.</p>
         </div>
         <div>
-          <h4 class="font-bold text-white mb-4">Quick Links</h4>
-          <ul class="space-y-2 text-sm"><li v-for="l in links" :key="l.href"><a :href="l.href" class="hover:text-[#A8E80F] transition">{{ l.label }}</a></li></ul>
+          <h4 class="font-bold text-[#0A2A5C] mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm"><li v-for="l in links" :key="l.href"><a :href="l.href" class="hover:text-[#0A2A5C] hover:underline decoration-[#A8E80F] decoration-2 underline-offset-4 transition">{{ l.label }}</a></li></ul>
         </div>
         <div>
-          <h4 class="font-bold text-white mb-4">Policies</h4>
+          <h4 class="font-bold text-[#0A2A5C] mb-4">Policies</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="#safeguarding" class="hover:text-[#A8E80F] transition">Safeguarding</a></li>
-            <li><a href="#" class="hover:text-[#A8E80F] transition">Privacy Policy</a></li>
-            <li><a href="#" class="hover:text-[#A8E80F] transition">Cookie Policy</a></li>
-            <li><a href="#" class="hover:text-[#A8E80F] transition">Complaints</a></li>
+            <li><a href="#safeguarding" class="hover:text-[#0A2A5C] hover:underline decoration-[#A8E80F] decoration-2 underline-offset-4 transition">Safeguarding</a></li>
+            <li><a href="#" class="hover:text-[#0A2A5C] hover:underline decoration-[#A8E80F] decoration-2 underline-offset-4 transition">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-[#0A2A5C] hover:underline decoration-[#A8E80F] decoration-2 underline-offset-4 transition">Cookie Policy</a></li>
+            <li><a href="#" class="hover:text-[#0A2A5C] hover:underline decoration-[#A8E80F] decoration-2 underline-offset-4 transition">Complaints</a></li>
           </ul>
         </div>
       </div>
-      <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-white/10 text-center text-xs">&copy; {{ new Date().getFullYear() }} Paratus Dwellings Ltd. All rights reserved.</div>
+      <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-slate-200 text-center text-xs text-slate-500">&copy; {{ new Date().getFullYear() }} Paratus Dwellings Ltd. All rights reserved.</div>
     </footer>
 
     <!-- MOBILE STICKY CALL BAR -->
