@@ -118,7 +118,7 @@ const links = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
   { label: 'Services', to: '/services' },
-  { label: 'Day & Evening', to: '/support' },
+  { label: 'Support', to: '/support' },
   { label: 'Safeguarding', to: '/safeguarding' },
   { label: 'Referrals', to: '/contact' },
   { label: 'Cleaning', to: '/cleaning' },

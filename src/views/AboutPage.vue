@@ -46,7 +46,7 @@ const asset = (name) => new URL(`../assets/${name}`, import.meta.url).href
 const images = {
   logo: asset('paratus-dwellings-logo.png'),
   hero: asset('hero.jpg'),
-  about: asset('about.jpg'),
+  about: asset('Paratus2.jpg.jpeg'),
   cleaning: asset('cleaning.jpg'),
   training: asset('training.jpg'),
   p1: asset('project-1.jpg'),

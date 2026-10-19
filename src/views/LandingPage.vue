@@ -18,7 +18,7 @@ import ContactPage from './ContactPage.vue'
 const asset = (name) => new URL(`../assets/${name}`, import.meta.url).href
 const images = {
   logo: asset('paratus-dwellings-logo.png'),
-  hero: asset('hero.jpg'),
+  hero: asset('Hero-image.jpeg'),
   about: asset('about.jpg'),
   cleaning: asset('cleaning.jpg'),
   training: asset('training.jpg'),
@@ -279,7 +279,7 @@ onBeforeUnmount(() => {
 
     <!-- HERO -->
     <section id="home" class="relative min-h-screen flex items-center bg-gradient-to-br from-[#061a3a] via-[#0A2A5C] to-[#12418a] overflow-hidden">
-      <img :src="images.hero" alt="" class="absolute inset-0 w-full h-full object-cover opacity-25" @error="hideBroken" />
+      <img :src="images.hero" alt="" class="absolute inset-0 w-full h-full object-cover" @error="hideBroken" />
       <div class="absolute inset-0 bg-gradient-to-r from-[#061a3a]/90 to-transparent"></div>
       <div class="blob absolute -top-20 -right-20 w-96 h-96 rounded-full bg-[#A8E80F]/20 blur-3xl"></div>
       <div class="blob-slow absolute bottom-0 left-10 w-72 h-72 rounded-full bg-[#A8E80F]/10 blur-3xl"></div>

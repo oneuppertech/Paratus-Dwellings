@@ -39,7 +39,6 @@
 import FooterView from '@/components/FooterView.vue'
 import HeaderView from '@/components/HeaderView.vue'
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
-import AboutPage from './AboutPage.vue'
 
 /* ---------- ASSETS (same filenames as before; missing images hide themselves) ---------- */
 const asset = (name) => new URL(`../assets/${name}`, import.meta.url).href
@@ -48,7 +47,7 @@ const images = {
   hero: asset('hero.jpg'),
   about: asset('about.jpg'),
   cleaning: asset('cleaning.jpg'),
-  training: asset('training.jpg'),
+  training: asset('skills.jpeg'),
   p1: asset('project-1.jpg'),
   p2: asset('project-2.jpg'),
   p3: asset('project-3.jpg'),
