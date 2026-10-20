@@ -63,7 +63,7 @@ const links = [
 const stats = [
   { value: 18, suffix: '+', label: 'Adults Supported' },
   { value: 3, suffix: '+', label: 'Years Leadership Experience' },
-  { value: 2, suffix: '', label: 'Support Windows: Day & Evening' },
+  { value: 2, suffix: '', label: 'Support Window: 24 Hours' },
   { value: 5, suffix: '', label: 'Step Individual Journey' }
 ]
 const counts = ref(stats.map(() => 0))

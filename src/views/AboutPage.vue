@@ -21,8 +21,7 @@
             with safeguarding, health and safety and local housing compliance at the centre of daily practice.
           </p>
           <p class="mt-4 text-slate-600 leading-relaxed">
-            Alongside accommodation, we offer day and evening support, life skills, digital skills and
-            employability guidance, so residents can build confidence and move towards independence.
+           Alongside accommodation, we offer continuous support, life skills, digital skills and employability guidance, so residents can build confidence and move towards independence.
           </p>
           <div class="mt-8 space-y-5">
             <div v-for="(r, i) in reasons" :key="r.title" class="flex gap-4" data-aos="fade-up" :data-aos-delay="i * 120">
@@ -125,7 +124,7 @@ const services = [
   { icon: 'fa-solid fa-laptop', title: 'Digital Skills', text: 'Everyday digital confidence, with certification pathways where approved providers are available.' },
   { icon: 'fa-solid fa-user-shield', title: 'Safeguarding', text: 'Clear procedures to protect adults, record concerns and escalate them appropriately.' },
   { icon: 'fa-solid fa-helmet-safety', title: 'Health & Safety', text: 'Risk assessments, fire safety and regular property and activity checks.' },
-  { icon: 'fa-solid fa-clipboard-check', title: 'Housing Compliance', text: 'Working to meet local housing, licensing and landlord safety requirements.' }
+  { icon: 'fa-solid fa-clipboard-check', title: 'Local Housing Compliance', text: 'Working to meet local housing, licensing and landlord safety requirements.' }
 ]
 
 const tab = ref('day')

@@ -1,24 +1,129 @@
 <template>
       <!-- SERVICES -->
-    <section id="services" class="py-24 px-5 bg-slate-50">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
-          <p :class="eyebrow">What We Do</p>
-          <h2 :class="h2">Accommodation and support, built around the individual</h2>
-          <p class="mt-4 text-slate-600">Person-centred, strengths-based and goal-focused, with safety and compliance underpinning everything.</p>
-        </div>
-        <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
-          <div v-for="(s, i) in services" :key="s.title" data-aos="fade-up" :data-aos-delay="(i % 3) * 120"
-            class="group relative bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-            <div class="absolute -right-10 -top-10 w-32 h-32 rounded-full bg-[#A8E80F]/20 group-hover:scale-[3] transition-transform duration-700"></div>
-            <span class="relative w-14 h-14 rounded-2xl bg-[#0A2A5C] text-[#A8E80F] flex items-center justify-center text-2xl group-hover:rotate-6 transition-transform"><i :class="s.icon"></i></span>
-            <h3 class="relative mt-6 text-xl font-bold text-[#0A2A5C]">{{ s.title }}</h3>
-            <p class="relative mt-3 text-slate-600 text-sm leading-relaxed">{{ s.text }}</p>
-            <a href="#contact" class="relative mt-5 inline-flex items-center gap-2 text-sm font-bold text-[#0A2A5C] group-hover:gap-3 transition-all">Enquire <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </div>
+    
+<!-- SERVICES -->
+<section id="services" class="py-24 px-5 bg-slate-50">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Main services heading -->
+    <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+      <p :class="eyebrow">What We Do</p>
+      <h2 :class="h2">
+        Accommodation and support, built around the individual
+      </h2>
+      <p class="mt-4 text-slate-600">
+        Person-centred, strengths-based and goal-focused support,
+        helping individuals build confidence and independence.
+      </p>
+    </div>
+
+    <!-- First six services -->
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+      <div
+        v-for="(s, i) in services.slice(0, 6)"
+        :key="s.title"
+        data-aos="fade-up"
+        :data-aos-delay="(i % 3) * 120"
+        class="group relative bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden"
+      >
+        <div
+          class="absolute -right-10 -top-10 w-32 h-32 rounded-full bg-[#A8E80F]/20 group-hover:scale-[3] transition-transform duration-700"
+        ></div>
+
+        <span
+          class="relative w-14 h-14 rounded-2xl bg-[#0A2A5C] text-[#A8E80F] flex items-center justify-center text-2xl group-hover:rotate-6 transition-transform"
+        >
+          <i :class="s.icon"></i>
+        </span>
+
+        <h3 class="relative mt-6 text-xl font-bold text-[#0A2A5C]">
+          {{ s.title }}
+        </h3>
+
+        <p class="relative mt-3 text-slate-600 text-sm leading-relaxed">
+          {{ s.text }}
+        </p>
+
+        <a
+          href="#contact"
+          class="relative mt-5 inline-flex items-center gap-2 text-sm font-bold text-[#0A2A5C] group-hover:gap-3 transition-all"
+        >
+          Enquire <i class="fa-solid fa-arrow-right"></i>
+        </a>
       </div>
-    </section>
+    </div>
+
+  </div>
+</section>
+
+<!-- OPERATING FRAMEWORK -->
+<section id="safeguarding" class="relative py-24 px-5 bg-white overflow-hidden">
+  <!-- Decorative background -->
+  <div class="absolute top-0 right-0 w-80 h-80 rounded-full bg-[#A8E80F]/10 blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-[#0A2A5C]/5 blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto">
+
+    <!-- Framework heading -->
+    <div class="text-center max-w-3xl mx-auto" data-aos="fade-up">
+      <p class="text-sm font-bold tracking-widest uppercase text-[#8fcf0a]">
+        Safety, Standards & Accountability
+      </p>
+
+      <h2 class="mt-3 text-3xl lg:text-4xl font-extrabold text-[#0A2A5C] leading-tight">
+        Operating Framework
+      </h2>
+
+      <p class="mt-5 text-slate-600 leading-relaxed">
+        Our approach to supported accommodation is underpinned by
+        safeguarding procedures, health and safety measures, and
+        housing compliance practices designed to support safe,
+        well-managed living environments.
+      </p>
+    </div>
+
+    <!-- Three framework cards -->
+    <div class="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+      <div
+        v-for="(s, i) in services.slice(6, 9)"
+        :key="s.title"
+        data-aos="fade-up"
+        :data-aos-delay="i * 120"
+        class="group relative bg-[#0A2A5C] rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden"
+      >
+        <div
+          class="absolute -right-12 -top-12 w-40 h-40 rounded-full bg-[#A8E80F]/10 group-hover:scale-150 transition-transform duration-700"
+        ></div>
+
+        <span
+          class="relative w-16 h-16 rounded-2xl bg-[#A8E80F] text-[#0A2A5C] flex items-center justify-center text-2xl"
+        >
+          <i :class="s.icon"></i>
+        </span>
+
+        <h3 class="relative mt-6 text-xl font-bold text-white">
+          {{ s.title }}
+        </h3>
+
+        <p class="relative mt-3 text-sm text-slate-300 leading-relaxed">
+          {{ s.text }}
+        </p>
+
+        <a
+          href="#contact"
+          class="relative mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#A8E80F] group-hover:gap-3 transition-all"
+        >
+          Enquire about our approach
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <div class="relative mt-7 h-1 w-12 rounded-full bg-[#A8E80F] group-hover:w-20 transition-all duration-300"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 </template>
 
 <script setup>
@@ -111,7 +216,7 @@ const services = [
   { icon: 'fa-solid fa-laptop', title: 'Digital Skills', text: 'Everyday digital confidence, with certification pathways where approved providers are available.' },
   { icon: 'fa-solid fa-user-shield', title: 'Safeguarding', text: 'Clear procedures to protect adults, record concerns and escalate them appropriately.' },
   { icon: 'fa-solid fa-helmet-safety', title: 'Health & Safety', text: 'Risk assessments, fire safety and regular property and activity checks.' },
-  { icon: 'fa-solid fa-clipboard-check', title: 'Housing Compliance', text: 'Working to meet local housing, licensing and landlord safety requirements.' }
+  { icon: 'fa-solid fa-clipboard-check', title: 'Local Housing Compliance', text: 'Working to meet local housing, licensing and landlord safety requirements.' }
 ]
 
 const tab = ref('day')
