@@ -1,22 +1,22 @@
-
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { computed } from 'vue'
+import { RouterView, useRoute } from 'vue-router'
 import HeaderView from './components/HeaderView.vue'
 import FooterView from './components/FooterView.vue'
+
+const route = useRoute()
+const showLayout = computed(() => !route.meta.hideLayout)
 </script>
 
 <template>
   <div class="min-h-screen flex flex-col">
-    <!-- Shared header on every page -->
-    <HeaderView />
+    <HeaderView v-if="showLayout" />
 
-    <!-- Current route's page content -->
     <main class="flex-1">
       <RouterView />
     </main>
 
-    <!-- Shared footer on every page -->
-    <FooterView />
+    <FooterView v-if="showLayout" />
   </div>
 </template>
 

@@ -11,6 +11,10 @@ import SafeGuarding from '@/views/SafeGuarding.vue'
 import ServicesPage from '@/views/ServicesPage.vue'
 import SkillsPage from '@/views/SkillsPage.vue'
 import SupportPage from '@/views/SupportPage.vue'
+import CompliantPolicy from '@/views/CompliantPolicy.vue'
+import SafeguardingPolicy from '@/views/SafeguardingPolicy.vue'
+import CookiePolicy from '@/views/CookiePolicy.vue'
+import PrivacyPolicy from '@/views/PrivacyPolicy.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -76,20 +80,42 @@ const router = createRouter({
       name: 'support',
       component: SupportPage
     },
-   
+    {
+      path: '/compliant',
+      name: 'compliant',
+      component: CompliantPolicy,
+      meta: { hideLayout: true }
+    },
+    {
+      path: '/safeguardingpolicy',
+      name: 'safeguardingpolicy',
+      component: SafeguardingPolicy,
+      meta: { hideLayout: true }
+    },
+    {
+      path: '/cookie',
+      name: 'cookie',
+      component: CookiePolicy,
+      meta: { hideLayout: true }
+    },
+    {
+      path: '/privacy',
+      name: 'privacy',
+      component: PrivacyPolicy,
+      meta: { hideLayout: true }
+    }
   ],
   scrollBehavior(to, from, savedPosition) {
-  if (savedPosition) {
-    return savedPosition
-  }
+    if (savedPosition) {
+      return savedPosition
+    }
 
-  return {
-    top: 0,
-    left: 0,
-    behavior: 'smooth'
+    return {
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    }
   }
-}
 })
-
 
 export default router

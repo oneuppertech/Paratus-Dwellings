@@ -322,6 +322,35 @@ onBeforeUnmount(() => {
               <span class="w-10 h-10 rounded-full bg-[#0A2A5C]/10 text-[#0A2A5C] flex items-center justify-center"><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon ml-0.5"></i></span>
               <div><p class="text-xs text-slate-500">Support</p><p class="font-bold text-[#0A2A5C]">Day & Evening</p></div>
             </div>
+            <!-- Floating Cleaning Agency Button -->
+<a
+  href="https://www.cleaning.paratusdwellings.co.uk/"
+  target="_blank"
+  rel="noopener noreferrer"
+  data-aos="fade-up"
+  data-aos-delay="400"
+  class="absolute -left-6 bottom-[-2rem] z-20
+         bg-[#A8E80F] text-[#0A2A5C]
+         rounded-2xl shadow-2xl px-5 py-3
+         flex items-center gap-3
+         font-bold text-sm
+         hover:bg-white hover:-translate-y-1
+         transition-all duration-300 float-delay"
+>
+  <span
+    class="w-10 h-10 rounded-full bg-[#0A2A5C]/10
+           flex items-center justify-center text-lg"
+  >
+    <i class="fa-solid fa-broom"></i>
+  </span>
+
+  <span>
+    <span class="block text-xs font-medium opacity-70">Need a spotless space?</span>
+    <span class="block">Visit Our Cleaning Agency</span>
+  </span>
+
+  <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+</a>
           </div>
         </div>
       </div>

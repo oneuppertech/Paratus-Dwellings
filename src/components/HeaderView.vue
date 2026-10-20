@@ -10,24 +10,26 @@
         <img :src="images.logo" alt="Paratus Dwellings" class="h-12 w-auto" @error="hideBroken" />
       </RouterLink>
       <nav class="hidden lg:flex items-center gap-7" aria-label="Main">
-        <RouterLink
-          v-for="l in links"
-          :key="l.to"
-          :to="l.to"
-          class="relative text-sm font-semibold text-[#0A2A5C] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-[#A8E80F] after:transition-all hover:after:w-full"
-          active-class="!text-[#15803d] after:!w-full"
-          :exact-active-class="'!text-[#15803d] after:!w-full'"
-        >
-          {{ l.label }}
-        </RouterLink>
-
-        <a
-          :href="TEL"
-          class="px-5 py-2.5 rounded-full bg-[#A8E80F] text-[#0A2A5C] font-bold text-sm hover:bg-[#0A2A5C] hover:text-white transition-all hover:-translate-y-0.5 shadow-md"
-        >
-          <i class="fa-solid fa-phone mr-1"></i>
-          {{ PHONE }}
-        </a>
+        <template v-for="l in links" :key="l.href">
+          <a
+            v-if="l.external"
+            :href="l.href"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="relative text-sm font-semibold text-[#0A2A5C] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-[#A8E80F] after:transition-all hover:after:w-full"
+          >
+            {{ l.label }}
+          </a>
+          <RouterLink
+            v-else
+            :to="l.href"
+            class="relative text-sm font-semibold text-[#0A2A5C] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-[#A8E80F] after:transition-all hover:after:w-full"
+            active-class="!text-[#15803d] after:!w-full"
+            exact-active-class="!text-[#15803d] after:!w-full"
+          >
+            {{ l.label }}
+          </RouterLink>
+        </template>
       </nav>
       <button
         class="lg:hidden text-2xl text-[#0A2A5C]"
@@ -39,17 +41,29 @@
     </div>
     <Transition name="drop">
       <div v-if="menuOpen" class="lg:hidden bg-white shadow-xl mt-2 mx-4 rounded-2xl p-5 space-y-3">
-        <RouterLink
-          v-for="l in links"
-          :key="l.to"
-          :to="l.to"
-          @click="menuOpen = false"
-          class="block font-semibold text-[#0A2A5C] py-1"
-          active-class="!text-[#15803d]"
-          exact-active-class="!text-[#15803d]"
-        >
-          {{ l.label }}
-        </RouterLink>
+        <template v-for="l in links" :key="l.href">
+          <a
+            v-if="l.external"
+            :href="l.href"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block font-semibold text-[#0A2A5C] py-1"
+            @click="menuOpen = false"
+          >
+            {{ l.label }}
+          </a>
+
+          <RouterLink
+            v-else
+            :to="l.href"
+            class="block font-semibold text-[#0A2A5C] py-1"
+            active-class="!text-[#15803d]"
+            exact-active-class="!text-[#15803d]"
+            @click="menuOpen = false"
+          >
+            {{ l.label }}
+          </RouterLink>
+        </template>
 
         <a
           :href="TEL"
@@ -102,14 +116,18 @@ const onScroll = () => {
   progress.value = h > 0 ? (window.scrollY / h) * 100 : 0
 }
 const links = [
-  { label: 'Home', to: '/' },
-  { label: 'About', to: '/about' },
-  { label: 'Services', to: '/services' },
-  { label: 'Support', to: '/support' },
-  { label: 'Safeguarding', to: '/safeguarding' },
-  { label: 'Skills', to: '/skills' }
+  { label: 'Home', href: '/', external: false },
+  { label: 'About', href: '/about', external: false },
+  { label: 'Services', href: '/services', external: false },
+  { label: 'Support', href: '/support', external: false },
+  { label: 'Safeguarding', href: '/safeguarding', external: false },
+  {
+    label: 'Cleaning Agency',
+    href: 'https://www.cleaning.paratusdwellings.co.uk/',
+    external: true
+  },
+  { label: 'Skills', href: '/skills', external: false }
 ]
-
 /* ---------- DATA ---------- */
 const stats = [
   { value: 18, suffix: '+', label: 'Adults Supported' },
