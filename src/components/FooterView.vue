@@ -18,6 +18,38 @@
           clinical treatment.
         </p>
 
+        <!-- Company Address -->
+<div class="mt-5 flex items-start gap-3 text-sm">
+  <div
+    class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#A8E80F]/20 text-[#0A2A5C]"
+  >
+    <i class="fa-solid fa-location-dot text-base"></i>
+  </div>
+
+  <div>
+    <h4 class="font-bold text-[#0A2A5C] mb-1">
+      Paratus Dwellings Ltd
+    </h4>
+
+    <address class="not-italic leading-6 text-slate-500">
+      Office 21822<br />
+      182–184 High Street North<br />
+      East Ham, London<br />
+      E6 2JA, United Kingdom
+    </address>
+
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=Office+21822%2C+182-184+High+Street+North%2C+East+Ham%2C+London+E6+2JA"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mt-2 inline-flex items-center gap-1 font-semibold text-[#0A2A5C] hover:text-[#15803d] transition"
+    >
+      Get directions
+      <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+    </a>
+  </div>
+</div>
+
         <a
           href="https://www.cleaning.paratusdwellings.co.uk/"
           target="_blank"
