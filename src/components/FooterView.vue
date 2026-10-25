@@ -32,10 +32,10 @@
     </h4>
 
     <address class="not-italic leading-6 text-slate-500">
-      Office 21822<br />
-      182–184 High Street North<br />
-      East Ham, London<br />
-      E6 2JA, United Kingdom
+      128 City Road<br />
+      EC1V 2NX<br />
+      London<br />
+      United Kingdom
     </address>
 
     <a
