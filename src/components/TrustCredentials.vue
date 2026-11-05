@@ -24,19 +24,19 @@ const credentials = [
   {
     name: 'ICO Registered',
     description: 'Information Commissioner’s Office registration',
-    image: asset('ico-registration.jpeg'),
+    image: asset('ico.png'),
     imageClass: 'w-[240px] sm:w-[270px] lg:w-[310px]'
   },
   {
     name: 'Health & Safety',
     description: 'Committed to Health and Safety',
-    image: asset('health-safety.jpeg'),
+    image: asset('hse.jpeg'),
     imageClass: 'w-[300px] sm:w-[360px] lg:w-[410px]'
   },
   {
     name: 'DBS Checked',
     description: 'Trusted and reliable support professionals',
-    image: asset('dbs-checked.jpeg'),
+    image: asset('dbs.jpg'),
     imageClass: 'w-[340px] sm:w-[400px] lg:w-[460px]'
   }
 ]

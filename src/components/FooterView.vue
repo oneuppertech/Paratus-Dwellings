@@ -2,6 +2,8 @@
   <footer
     class="bg-white text-slate-600 border-t-4 border-[#A8E80F] shadow-[0_-8px_30px_rgba(10,42,92,.08)] pt-16 pb-8 px-5"
   >
+  <!-- TRUST, REGISTRATION & PARTNERSHIP CREDENTIALS -->
+    <TrustCredentials variant="footer" />
     <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
       <!-- Company information -->
       <div class="md:col-span-2">
@@ -115,7 +117,7 @@
 
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-
+import TrustCredentials from '@/components/TrustCredentials.vue'
 const asset = (name: string) => new URL(`../assets/${name}`, import.meta.url).href
 
 const images = {
